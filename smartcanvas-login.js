@@ -51,7 +51,22 @@ casper.start('http://www.smartcanvas.com')
       this.click("#signIn");
     });
   });
-}).then(function() {this.wait(20000);});
+}).then(function() {this.wait(20000);}).then(function() {
+  var acctkVal = null;
+
+  for (var i in phantom.cookies) {
+    if (phantom.cookies[i].name == "acctk") {
+        acctkVal = phantom.cookies[i].value;
+    }
+  }
+
+  if (acctkVal == null) {
+    console.log("No auth cookie found");
+  }
+  else {
+    console.log("Use Acctk: "+acctkVal);
+  }
+});
 
 casper.run(function () {
     casper.done();
