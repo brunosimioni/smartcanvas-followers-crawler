@@ -30,29 +30,29 @@ console.log("Opening Smartcanvas");
 casper.start('http://www.smartcanvas.com')
 .then(function() {
   casper.waitForSelector(".sign-up",function() {
+      this.capture("smartcanvas-login-step1-5.png");
       this.click(".sign-up");
   });
 }).then(function () {
   casper.waitForSelector("#signInWithGoogleButton", function() {
+    this.capture("smartcanvas-login-step2-5.png");
     this.click("#signInWithGoogleButton");
   });
 }).then(function () {
   casper.waitForSelector("form#gaia_loginform",function() {
+    this.capture("smartcanvas-login-step3-5.png");
     casper.sendKeys('#Email', LOGIN_USERNAME);
     this.click("#next");
-    this.wait(10000);
+    this.wait(2000);
+    this.capture("smartcanvas-login-step4-5.png");
     casper.waitForSelector("#Passwd",function() {
       casper.sendKeys('#Passwd', LOGIN_PASSWORD);
+      this.capture("smartcanvas-login-step5-5.png");
       this.click("#signIn");
     });
   });
-}).then(function() {
-  this.capture("step-parc1.png");
-  this.wait(20000);
-  this.capture("step-parc2.png");
-});
+}).then(function() {this.wait(20000);});
 
 casper.run(function () {
-    this.capture("step-final.png");
     casper.done();
 });

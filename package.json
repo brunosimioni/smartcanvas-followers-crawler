@@ -1,0 +1,14 @@
+{
+  "name": "smartcanvas-followers-crawler",
+  "version": "1.0.0",
+  "author": "Bruno Simioni <bsimioni@ciandt.com>",
+  "dependencies": {
+    "casperjs": "*",
+    "request": "*",
+    "phantomjs": "*",
+    "winston": "*",
+    "path": "*"
+  },
+  "preferGlobal": true,
+  "license": "GPL 3.0"
+}
