@@ -49,9 +49,11 @@ casper.start('http://www.smartcanvas.com')
       casper.sendKeys('#Passwd', LOGIN_PASSWORD);
       this.capture("smartcanvas-login-step5-5.png");
       this.click("#signIn");
+      this.wait(4000);
     });
   });
-}).then(function() {this.wait(20000);}).then(function() {
+}).then(function() {this.wait(25000);}).then(function() {
+  this.wait(4000);
   var acctkVal = null;
 
   for (var i in phantom.cookies) {
