@@ -18,6 +18,7 @@ var sources = [
   "https://ciandt.smartcanvas.com/api/v1/collections/69040001/followers?timezoneOffset=180&offset=__offset__",
   "https://ciandt.smartcanvas.com/api/v1/collections/70990001/followers?timezoneOffset=180&offset=__offset__",
   "https://ciandt.smartcanvas.com/api/search/v1/cards/teams/4687659565842432/members?timezoneOffset=180&offset=__offset__",
+  "https://ciandt.smartcanvas.com/api/search/v1/cards/teams/6101871420768256/members?timezoneOffset=180&offset=__offset__"
 ];
 
 var followers = [];
